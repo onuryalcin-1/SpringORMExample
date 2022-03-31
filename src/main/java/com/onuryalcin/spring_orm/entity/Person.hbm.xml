@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.onuryalcin.spring_orm.entity.Person" table="tbl_person">
+        <id name="id">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name">
+            <column name="NAME" length="60" not-null="true"/>
+        </property>
+
+        <property name = "lastName">
+            <column name="LASTNAME" length="60" not-null="true"/>
+        </property>
+
+        <property name = "gender">
+            <column name="GENDER" length="20" not-null="true"/>
+        </property>
+
+        <property name="salary">
+            <column name="SALARY" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
