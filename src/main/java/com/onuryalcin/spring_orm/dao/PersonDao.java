@@ -2,6 +2,7 @@ package com.onuryalcin.spring_orm.dao;
 
 import com.onuryalcin.spring_orm.entity.Person;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +16,17 @@ public class PersonDao {
     }
 
     public void setTemplate(HibernateTemplate template) {
+
         this.template = template;
     }
 
     public void addPerson(Person person){
+
         template.save(person);
     }
 
     public void updatePerson(Person person){
+
         template.update(person);
     }
 
